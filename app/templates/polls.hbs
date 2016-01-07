@@ -1,0 +1,7 @@
+<h2>Polls</h2>
+
+<ul>
+{{#each model as |poll|}}
+	<li><a href="polls/{{poll.id}}">{{poll.text}}</a></li>
+{{/each}}
+</ul>
