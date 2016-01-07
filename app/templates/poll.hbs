@@ -1,1 +1,6 @@
 <h2>{{model.text}}</h2>
+<ul>
+	{{#each model.choices as |choice|}}
+	<li>{{choice.text}}</li>
+	{{/each}}
+</ul>
