@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'poll-app',
+    modulePrefix: 'todo-app',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

@@ -1,7 +1,7 @@
 {
-  "name": "poll-app",
+  "name": "todo-app",
   "version": "0.0.0",
-  "description": "Small description for poll-app goes here",
+  "description": "Small description for todo-app goes here",
   "private": true,
   "directories": {
     "doc": "doc",
