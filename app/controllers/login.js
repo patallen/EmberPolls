@@ -2,14 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     sendCredentials: function(username, password) {
-        var _this = this;
         var adapter = this.container.lookup('adapter:application');
         adapter.ajax(
-            adapter.host+'/users/authenticate',
+            adapter.host+'/auth',
             'POST',
             {data: {
-                "username": "pat",
-                "password": "password"
+                "username": this.get('username'),
+                "password": this.get('password')
             }}
         ).then(function(data){
             console.log(data)
