@@ -5,19 +5,16 @@ export default Ember.Controller.extend({
         var _this = this;
         var adapter = this.container.lookup('adapter:application');
         adapter.ajax(
-            adapter.host+'/auth',
+            adapter.host+'/users/authenticate',
             'POST',
-            {
-                username: "pat",
-                password: "password" 
-            }
+            {data: {
+                "username": "pat",
+                "password": "password"
+            }}
         ).then(function(data){
             console.log(data)
         }).catch(function(err){
             console.log(err)
         })
     },
-    alertMe: function() {
-        alert("alerting you") 
-    }
 });
