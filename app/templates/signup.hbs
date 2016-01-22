@@ -1,0 +1,24 @@
+<div class="col-xs-12">
+    <form {{action "login" on="submit"}}>
+        <div class="col-lg-2 col-lg-offset-5
+                    col-md-4 col-md-offset-4
+                    col-sm-6 col-sm-offset-3
+                    col-xs-12">
+            <div class="form-group row">
+                {{input value=username class="form-control" placeholder="Username"}}
+            </div>
+            <div class="form-group row">
+                {{input value=email class="form-control" placeholder="Email"}}
+            </div>
+            <div class="form-group row">
+                {{input value=password class="form-control" type="password" placeholder="Password"}}
+            </div>
+            <div class="form-group row">
+                {{input value=password2 class="form-control" type="password" placeholder="Password"}}
+            </div>
+            <div class="row">
+                <button value="submit" class="btn btn-block btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</div>
