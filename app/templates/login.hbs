@@ -1,4 +1,5 @@
 <div class="col-xs-12">
+<form {{action "login" on="submit"}}>
     <div class="col-lg-2 col-lg-offset-5
                 col-md-4 col-md-offset-4
                 col-sm-6 col-sm-offset-3
@@ -12,7 +13,8 @@
             {{input value=password class="form-control" type="password" placeholder="Password"}}
         </fieldset>
         <div class="row">
-            <button {{action "login"}} value="submit" class="btn btn-block btn-primary">Sign In</button>
+            <button value="submit" class="btn btn-block btn-primary">Sign In</button>
         </div>
     </div>
+</form>
 </div>
