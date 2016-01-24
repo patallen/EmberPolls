@@ -2,7 +2,13 @@
     <span class="navbar-brand">TodoApp</span>
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
+            {{#unless session.isAuthenticated}}
+            <li><a href="/login">Login</a></li>
+            {{/unless}}
+            {{#if session.isAuthenticated}}
             <li><a href="/todos">My Todos</a></li>
+            <li><a {{action "logout"}} href="/">Log Out</a></li>
+            {{/if}}
         </ul>
     </div>
 </div>
