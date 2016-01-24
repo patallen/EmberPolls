@@ -22,17 +22,17 @@ module.exports = function(environment) {
     authorizer: 'authorizer:token',
   };
   ENV['ember-simple-auth-token'] = {
+    authorizationHeaderName: 'Authorization',
     refreshAccessTokens: true,
     identificationField: 'username',
     passwordField: 'password',
-    authorizationPrefix: 'JWT',
-    authorizationHeaderName: 'Authorization',
+    authorizationPrefix: 'JWT ',
     tokenPropertyName: 'access_token',
     headers: {},
     tokenExpireName: 'exp',
     serverTokenEndpoint: 'http://api.practiceapi.dev/auth',
     refreshLeeway: 0,
-    timeFactor: 1
+    timeFactor: 1000
   };
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

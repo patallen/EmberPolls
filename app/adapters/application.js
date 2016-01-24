@@ -1,9 +1,10 @@
 import DS from 'ember-data';
+import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
-// We need to create a custom adapter for not-rest requests
-export default DS.JSONAPIAdapter.extend({
+export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
 	host: 'http://api.practiceapi.dev',
 	headers: {
 	    "Content-Type": "application/json"
-	}
+	},
+    authorizer: 'authorizer:token'
 });
