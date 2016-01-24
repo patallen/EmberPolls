@@ -1,12 +1,12 @@
 <div class="col-xs-12">
-<form {{action "login" on="submit"}}>
+<form {{action "authenticate" on="submit"}}>
     <div class="col-lg-2 col-lg-offset-5
                 col-md-4 col-md-offset-4
                 col-sm-6 col-sm-offset-3
                 col-xs-12">
         <fieldset class="form-group row">
             <label for="username">Username</label>
-            {{input value=username class="form-control" placeholder="Username"}}
+            {{input value=identification class="form-control" placeholder="Username"}}
         </fieldset>
         <fieldset class="form-group row">
             <label for="password">Password</label>

@@ -18,7 +18,22 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
+  ENV['ember-simple-auth'] = {
+    authorizer: 'authorizer:token',
+  };
+  ENV['ember-simple-auth-token'] = {
+    refreshAccessTokens: true,
+    identificationField: 'username',
+    passwordField: 'password',
+    authorizationPrefix: 'JWT',
+    authorizationHeaderName: 'Authorization',
+    tokenPropertyName: 'access_token',
+    headers: {},
+    tokenExpireName: 'exp',
+    serverTokenEndpoint: 'http://api.practiceapi.dev/auth',
+    refreshLeeway: 0,
+    timeFactor: 1
+  };
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
