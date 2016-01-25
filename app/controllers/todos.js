@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
     actions: {
         createTodo: function(){
             var newTodo = this.get('todo');
+            this.set('todo', "")
             var todo = this.store.createRecord('todo', {text: newTodo, completed: false});
             todo.save();
         }
