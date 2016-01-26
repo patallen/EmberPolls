@@ -31,6 +31,7 @@ module.exports = function(environment) {
     headers: {},
     tokenExpireName: 'exp',
     serverTokenEndpoint: 'http://api.practiceapi.dev/auth',
+    serverTokenRefreshEndpoint: 'http://api.practiceapi.dev/refresh-token',
     refreshLeeway: 0,
     timeFactor: 1000
   };
