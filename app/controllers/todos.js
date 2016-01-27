@@ -8,6 +8,6 @@ export default Ember.Controller.extend({
             this.set('todo', "")
             var todo = this.store.createRecord('todo', {text: newTodo, completed: false});
             todo.save();
-        }
+        },
     }
 });

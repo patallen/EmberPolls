@@ -3,8 +3,10 @@
     padding: 0;
 }
 .todo-list > li {
-    height: 30px;
     padding: 7px 4px;
-    margin: 10px 2px;
-    border-left: 1px solid lightgray;
+    margin: 0px 2px;
+}
+.todo-list li input[type="checkbox"] {
+    padding: 0 10px;
+    margin: 0 2px;
 }

@@ -5,5 +5,9 @@
     <form {{action "createTodo" on="submit"}}>
         {{ input value=todo class="form-control" placeholder="What do you need to do?"}}
     </form>
-    {{todo-list todos=model}}
+    <ul class="todo-list">
+        {{#each model as |todo|}}
+        {{todo-item todo=todo}}
+        {{/each}}
+    </ul>
 </div>
