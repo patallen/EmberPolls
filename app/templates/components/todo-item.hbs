@@ -1,8 +1,8 @@
 {{#if isEditing}}
-{{todo-input focus-out="doneEditing" value=buffText}}
+    {{todo-input focus-out="doneEditing" value=buffText enter="doneEditing" escape-press="cancelEditing"}}
 {{else}}
-{{input type="checkbox" checked=todo.complete }}
-<span class="todo-text" {{action "setEditing" on="doubleClick"}}>
-{{todo.text}}
-</span>
+    {{input type="checkbox" checked=todo.complete}}
+    <span class="todo-text" {{action "setEditing" on="doubleClick"}}>
+    {{todo.text}}
+    </span>
 {{/if}}
