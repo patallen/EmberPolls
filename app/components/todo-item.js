@@ -17,6 +17,7 @@ export default Ember.Component.extend({
             // This still needs to save, but we have
             // to implement 'PATCH' method on the backend.
             this.set('isEditing', false)
+            todo.save()
         },
         cancelEditing: function(){
             var todo = this.todo;

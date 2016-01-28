@@ -1,7 +1,7 @@
 {{#if isEditing}}
 {{input focus-out="doneEditing" value=buffText}}
 {{else}}
-{{input type="checkbox" checked=todo.completed }}
+{{input type="checkbox" checked=todo.complete }}
 <span class="todo-text" {{action "setEditing" on="doubleClick"}}>
 {{todo.text}}
 </span>
