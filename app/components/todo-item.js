@@ -27,6 +27,10 @@ export default Ember.Component.extend({
         saveTodo: function(){
             var todo = this.todo;
             todo.save();
+        },
+        deleteTodo: function() {
+            var todo = this.todo;
+            todo.destroyRecord();
         }
     }
 });
