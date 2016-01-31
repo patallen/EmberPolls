@@ -4,6 +4,7 @@
         <ul class="nav navbar-nav navbar-right">
             {{#unless session.isAuthenticated}}
             <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
             {{/unless}}
             {{#if session.isAuthenticated}}
             <li><a href="/todos">My Todos</a></li>
