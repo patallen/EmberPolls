@@ -1,0 +1,24 @@
+<div class="col-md-4 col-md-offset-4
+            col-sm-6 col-sm-offset-3
+            col-xs-12">
+    <h2>Todos</h2>
+    <form {{action "createTodo" on="submit"}}>
+        {{ input value=todo class="form-control" placeholder="What do you need to do?"}}
+    </form>
+    <ul class="todo-list">
+        {{#each model as |todo|}}
+        {{todo-item todo=todo}}
+        {{/each}}
+    </ul>
+    <ul class="inline-list status-list">
+        <li>
+            {{#link-to 'todos.index' activeClass="selected"}}All{{/link-to}}
+        </li>
+        <li>
+            {{#link-to 'todos.active' activeClass="selected"}}Active{{/link-to}}
+        </li>
+        <li>
+            {{#link-to 'todos.complete' activeClass="selected"}}Complete{{/link-to}}
+        </li>
+    </ul>
+</div>

@@ -5,8 +5,8 @@ export default Ember.Route.extend({
         this.render('todos.index');
     },
     model() {
-        return this.store.filter('todo', {completed: false}, function(todo){
-            return !todo.get('complete');
+        return this.store.filter('todo', {complete: true}, function(todo){
+            return todo.get('complete');
         });
     }
 });

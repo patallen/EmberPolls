@@ -6,9 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('todos', function(){
+  this.route('todos', function() {
+    this.route('complete');
     this.route('active');
-    this.route('completed')
   });
   this.route('users');
   this.route('login');
