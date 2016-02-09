@@ -14,6 +14,10 @@ Router.map(function() {
   this.route('login');
   this.route('signup');
   this.route('lists');
+  this.route('list', { path: '/lists/:id'}, function() {
+    this.route('active');
+    this.route('completed');
+  });
 });
 
 export default Router;
