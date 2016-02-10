@@ -6,18 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('todos', function() {
-    this.route('complete');
-    this.route('active');
-  });
-  this.route('users');
-  this.route('login');
-  this.route('signup');
-  this.route('lists');
   this.route('list', { path: '/lists/:id'}, function() {
     this.route('active');
     this.route('completed');
   });
+  this.route('login');
+  this.route('signup');
+  this.route('lists');
 });
 
 export default Router;
