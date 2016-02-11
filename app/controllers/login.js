@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
             var credentials = this.getProperties('identification', 'password');
             var authenticator = 'authenticator:jwt';
 
-            this.get('session').authenticate(authenticator, credentials).then(function(value){
+            this.get('session').authenticate(authenticator, credentials).then(function(){
                 // We could give a welcome alert.
             },
             function(err){

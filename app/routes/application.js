@@ -3,7 +3,7 @@ import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mi
 
 export default Ember.Route.extend(ApplicationRouteMixin, {
     sessionAuthenticated() {
-        this.transitionTo('todos');
+        this.transitionTo('lists');
     },
     sessionInvalidated() {
         this.transitionTo('login');
