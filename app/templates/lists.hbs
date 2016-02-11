@@ -8,7 +8,7 @@
     <ul class="todo-list">
         {{#each model as |list|}}
         <li class='todo-item'>
-        {{ list.title }}
+        {{# link-to "list" list}}{{ list.title }}{{/link-to}}
         </li>
         {{/each}}
     </ul>

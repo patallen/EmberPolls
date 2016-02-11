@@ -7,7 +7,7 @@
             <li><a href="/signup">Sign Up</a></li>
             {{/unless}}
             {{#if session.isAuthenticated}}
-            <li><a href="/todos">My Todos</a></li>
+            <li><a href="/lists">My Todos</a></li>
             <li><a {{action "logout"}} href="/">Log Out</a></li>
             {{/if}}
         </ul>
